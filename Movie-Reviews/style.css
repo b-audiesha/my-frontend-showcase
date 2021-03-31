@@ -1,0 +1,58 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+header{
+  width: 100%;
+  height: 50px;
+  background: rgb(38, 39, 38);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #ccc;
+}
+header h1{
+  margin: 0 20px;
+  color: #fff;
+}
+header a {
+  text-decoration: none;
+}
+header form{
+  display: flex;
+  align-items: center;
+}
+/*search form*/
+#search{
+  width: 230px;
+  height: 30px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+#loading-animation{
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.jumbotron{
+  background-image: url('https://images.fandango.com/cms/assets/4ca035c0-204d-11ea-a1d8-836502298ce7--studioghibli-banner-desktop.jpg');
+  background-size: cover;
+  height: 100%;}
+
