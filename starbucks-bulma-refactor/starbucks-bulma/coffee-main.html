@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns="http://www.w3.org/1999/html" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styling.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<!--starbucks design styling-->
+<body>
+
+<!--mobile navbar-->
+
+<nav class="navbar is-light is-hidden-tablet" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <img src="images/navbar-logo.png" class="sm-nav-logo">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="isOpen = !isOpen"
+       v-bind:class="{'is-active': isOpen}">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" v-bind:class="{'is-active': isOpen}">
+    <div class="navbar-end">
+      <span><a href="#" class>Home</a></span>
+      <span><a href="#" class>Menu</a></span>
+      <span><a href="#" class>Whats New?</a></span>
+      <span><a href="#" class>Contact</a></span>
+    </div>
+  </div>
+</nav>
+
+
+<!--full screen navbar-->
+<section>
+  <div class="circle is-hidden-touch"></div>
+  <header class="navbar is-hidden-touch">
+    <a href="#"><img src="images/logo.png" class="logo"></a> <!--Navigation and Green Logo-->
+    <ul>
+      <li><a href="#" class>Home</a></li>
+      <li><a href="#" class>Menu</a></li>
+      <li><a href="#" class>Whats New?</a></li>
+      <li><a href="#" class>Contact</a></li>
+    </ul>
+  </header>
+
+  <div class="tile is-parent">
+    <article class="tile is-child box is-hidden-tablet mobile-tile">
+      <p class="title">Welcome Back!</p>
+      <figure class="image is-4by4">
+        <img src="images/3cups.jpg">
+      </figure>
+    </article>
+
+
+    <!--large screen content-->
+    <div class="content">
+      <div class="textBox">
+        <h2 class="is-hidden-touch"> It's not just Coffee<br>It's <span>Starbucks</span></h2>
+        <p class="is-hidden-touch"> Frightened people. Give me a Dalek any day. No idea. Just do what I do: hold tight
+          and pretend it's a plan. Yes, well, it's a brilliant noise. I love that noise. You are the only mystery worth
+          solving. Thank you, Strax. And if I'm ever in need of advice from a psychotic potato dwarf, you'll certainly
+          be the first to know. I once spent a hell of a long time trying to get a gobby Australian to Heathrow airport.
+          Geronimo! It's a fez. I wear a fez now. Fezzes are cool. Father Christmas. Santa Claus. Or, as I’ve always
+          known him, Jeff.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="imgBox">
+        <img src="images/img1.png" class="starbucks">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png');changeCircleColor('#017143')"></li>
+      <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png');changeCircleColor('#eb7495')"></li>
+      <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png');changeCircleColor('#d752b1')"></li>
+    </ul>
+    <ul class="sci is-hidden-touch">
+      <li><a href="#"><img src="images/facebook.png"></a>
+      <li><a href="#"><img src="images/twitter.png"></a>
+      <li><a href="#"><img src="images/instagram.png"></a>
+    </ul>
+    <nav class="level">
+      <div class="level-item has-text-centered py-3">
+        <div>
+          <p class="heading">Tweets</p>
+          <p class="title">3,456</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Following</p>
+          <p class="title">123</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Followers</p>
+          <p class="title">456K</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Likes</p>
+          <p class="title">789</p>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<div class="row pb-5">
+  <div class="col">
+    <div class="container text-left">
+      <label for="roast-selection">Roast Types</label>
+      <select id="roast-selection" class="btn dropdown-toggle" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+        <option class="dropdown-item">All</option>
+        <option class="dropdown-item">Drip</option>
+        <option class="dropdown-item">Iced</option>
+        <option class="dropdown-item">Frozen</option>
+        <option class="dropdown-item">Tea</option>
+        <input class="input is-small form-control search-input is-rounded" id="myInput" type="text"
+               placeholder="Search Our Roast">
+      </select></div>
+  </div>
+  <!--Custom Column-->
+
+  <div class="col">
+    <div class="container text-right">
+      <label for="add-coffee">Custom Request</label>
+      <select id="add-coffee" class="btn dropdown-toggle" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+        <option class="dropdown-item">Select Drink Type</option>
+        <option class="dropdown-item">Drip</option>
+        <option class="dropdown-item">Iced</option>
+        <option class="dropdown-item">Frozen</option>
+        <option class="dropdown-item">Tea</option>
+      </select>
+      <input class="input is-small form-control search-input is-rounded" type="text" placeholder="Custom Drink"
+             id="newDrinkSearch">
+      <input class="button" id="submit" type="submit">
+    </div>
+  </div>
+  <section>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <div id="coffees" class="d-flex flex-wrap justify-content-center text-center">
+        </div>
+      </article>
+    </div>
+    <!--
+
+        <div class="container p-5 m-5">
+          <div class="row">
+            <div class="col">
+
+            </div>
+          </div>
+        </div>
+    </section>-->
+
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <form class="box  is-centered -->column is-half"><h2>Join Our Coffee Club</h2>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="e.g. alex@example.com">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input class="input" type="password" placeholder="********">
+            </div>
+          </div>
+
+          <button class="button">Sign in</button>
+        </form>
+      </article>
+    </div>
+    <script src=_javascript/main.js></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+  </section>
+</div>
+</body>
+</html>
+
